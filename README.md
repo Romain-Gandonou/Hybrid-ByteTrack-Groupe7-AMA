@@ -25,28 +25,31 @@ probables par similarité d'histogramme couleur (HSV)
 Comparaison : baseline vs hybride, sur vérité terrain MOTChallenge
 
 ## 3. Structure du dépôt
+
+```
+.
 ├── Projet_Suivi_ByteTrack.md
 ├── README.md
 ├── requirements.txt
 ├── results
-│ ├── check_bdd_0090c713-9d58a186_frame50.jpg
-│ ├── check_bdd_00ac3256-0f8e2cda_frame50.jpg
-│ ├── check_bdd_012e9465-1031243b_frame50.jpg
-│ ├── comparison_mota_idf1.csv
-│ └── tracking
-│ ├── baseline
-│ ├── hybride
-│ └── notre_hybride
+│   ├── check_bdd_0090c713-9d58a186_frame50.jpg
+│   ├── check_bdd_00ac3256-0f8e2cda_frame50.jpg
+│   ├── check_bdd_012e9465-1031243b_frame50.jpg
+│   ├── comparison_mota_idf1.csv
+│   └── tracking
+│       ├── baseline
+│       ├── hybride
+│       └── notre_hybride
 └── scripts
-├── build_yolo_dataset.py
-├── demo_video.py
-├── eval_mot.py
-├── notre_module_hybride.py
-├── prepare_bdd_sequences.py
-├── run_tracking.py
-├── train_yolo.py
-└── verify_bdd_gt.py
-
+    ├── build_yolo_dataset.py
+    ├── demo_video.py
+    ├── eval_mot.py
+    ├── notre_module_hybride.py
+    ├── prepare_bdd_sequences.py
+    ├── run_tracking.py
+    ├── train_yolo.py
+    └── verify_bdd_gt.py
+```
 
 **Note** : `data/` et `runs/` (poids entraînés, datasets bruts) ne sont pas
 versionnés sur GitHub (~21 Go) — voir section 5 pour les régénérer.
