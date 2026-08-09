@@ -2,7 +2,7 @@
 
 Projet Intégrateur 1 — PIIA Cohorte 2, Académie des Mathématiques Appliquées (AMA)
 
-**Groupe 7** : Amen QUENUM · Ablo Romain GANDONOU · Emiline ADANGNISSODE · Wilfried BONOUPLAN
+**Groupe 7** : Amen QUENUM · Ablo Romain GANDONOU · Emiline ADANGNISSODE · Wilfried BONOU
 
 ---
 
