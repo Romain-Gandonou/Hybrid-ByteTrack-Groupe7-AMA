@@ -1,0 +1,19 @@
+# Environnement virtuel
+.venv/
+venv/
+
+# Données volumineuses (régénérables via scripts/, voir README)
+data/
+runs/
+LIVRABLE_GROUPE7/
+LIVRABLE_GROUPE7.zip
+
+# Poids de modèles pré-entraînés (téléchargés automatiquement par ultralytics)
+*.pt
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Fichiers de test générés automatiquement
+bus.jpg
