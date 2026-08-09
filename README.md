@@ -25,32 +25,31 @@ probables par similarité d'histogramme couleur (HSV)
 Comparaison : baseline vs hybride, sur vérité terrain MOTChallenge
 
 ## 3. Structure du dépôt
-
-Suivi_ByteTrack/
-├── scripts/ # Pipeline complet, à exécuter dans l'ordre (voir section 5)
-│ ├── build_yolo_dataset.py # Construit le dataset d'entraînement YOLO depuis BDD100K
-│ ├── train_yolo.py # Fine-tuning YOLOv8n
-│ ├── prepare_bdd_sequences.py # Prépare 3 séquences BDD100K au format MOTChallenge (GT)
-│ ├── verify_bdd_gt.py # Vérification visuelle de la vérité terrain
-│ ├── run_tracking.py # Lance ByteTrack (baseline) + BoT-SORT (référence)
-│ ├── notre_module_hybride.py # Notre module de correction par couleur
-│ ├── eval_mot.py # Calcule MOTA/IDF1 et compare les méthodes
-│ └── demo_video.py # Génère une vidéo annotée de démonstration
-│
-├── data/ # NON versionné (voir .gitignore) — régénérable, section 5
-│ ├── BDD100K_MOT/ # 3 séquences d'évaluation (vérité terrain incluse)
-│ ├── yolo_bdd/ # Dataset d'entraînement au format YOLO
-│ └── external/bdd100k_kaggle/ # Source brute BDD100K (vidéos + labels)
-│
-├── results/ # Versionné — résultats légers (métriques, images de contrôle)
-│ ├── comparison_mota_idf1.csv # Tableau de résultats final
-│ └── tracking/ # Sorties brutes de tracking par méthode
-│
-├── runs/ # NON versionné — poids entraînés, résultats YOLO bruts
-│
+├── Projet_Suivi_ByteTrack.md
+├── README.md
 ├── requirements.txt
-└── README.md
+├── results
+│ ├── check_bdd_0090c713-9d58a186_frame50.jpg
+│ ├── check_bdd_00ac3256-0f8e2cda_frame50.jpg
+│ ├── check_bdd_012e9465-1031243b_frame50.jpg
+│ ├── comparison_mota_idf1.csv
+│ └── tracking
+│ ├── baseline
+│ ├── hybride
+│ └── notre_hybride
+└── scripts
+├── build_yolo_dataset.py
+├── demo_video.py
+├── eval_mot.py
+├── notre_module_hybride.py
+├── prepare_bdd_sequences.py
+├── run_tracking.py
+├── train_yolo.py
+└── verify_bdd_gt.py
 
+
+**Note** : `data/` et `runs/` (poids entraînés, datasets bruts) ne sont pas
+versionnés sur GitHub (~21 Go) — voir section 5 pour les régénérer.
 
 ## 4. Installation
 
